@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskmanager.MainPage">
+    <StackLayout>
+        <Image
+            WidthRequest="150"
+            Margin="0, 20, 0, 60"/>
+        <Frame
+        BackgroundColor="#DDA0DD"
+            WidthRequest="350"
+            CornerRadius="24">
+        <Entry
+            x:Name="UserNameEntry"
+            Placeholder="User Name"
+            PlaceholderColor="White"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+
+    </Frame>
+
+    <Frame
+            Margin="0, 15, 0, 0"
+            BackgroundColor="#DDA0DD"
+            WidthRequest="350"
+            CornerRadius="24">
+        <Entry
+            x:Name="PasswordEntry"
+            Placeholder="Password"
+            PlaceholderColor="White"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            IsPassword="True"/>
+
+    </Frame>
+    <Button
+            BackgroundColor="#DDA0DD"
+            WidthRequest="50"
+            Margin="0, 10, 30, 0"
+            HorizontalOptions="End"
+            Text="0"
+            FontSize="20"
+            Clicked="PasswordShow"/>
+    <Button
+            BackgroundColor="#DDA0DD"
+            Margin="0, 22, 0, 0"
+            WidthRequest="300"
+            HeightRequest="50"
+            CornerRadius="50"
+            Text="login"
+            TextColor="White"
+            FontSize="20"
+            FontAttributes="Bold,Bold"
+            Clicked="LoginButton"/>
+    <Button
+            Margin="0, 20, 0, 0"
+            BackgroundColor="#DDA0DD"
+            Text="Forget Password"
+            TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>

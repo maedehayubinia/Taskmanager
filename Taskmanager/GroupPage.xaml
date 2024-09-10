@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              
+             Title="GroupsPage" 
+             BackgroundColor="#6c6c6c">
+    <StackLayout>
+        <Label 
+            Text="Group Page" 
+            HorizontalOptions="CenterAndExpand" 
+            FontSize="35" 
+            Margin="0, 10, 0, 20" 
+            FontAttributes="Bold" />
+
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Group 1" 
+                        CornerRadius="20" 
+                        BackgroundColor="#DDA0DD"
+                        TextColor="White" 
+                        FontSize="20" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        WidthRequest="200" 
+                        HeightRequest="60" 
+                         />
+
+                <Button Text="Group 2" 
+                        CornerRadius="20" 
+                        BackgroundColor="#DDA0DD"
+                        TextColor="White"
+                        FontSize="20" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        WidthRequest="200" 
+                        HeightRequest="60" 
+                         />
+
+                <Button Text="Group 3" 
+                        CornerRadius="20" 
+                        BackgroundColor="#DDA0DD"
+                        TextColor="White"
+                        FontSize="20" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        WidthRequest="200" 
+                        HeightRequest="60" 
+                         />
+
+                <Button Text="Group 4" 
+                        CornerRadius="20" 
+                        BackgroundColor="#DDA0DD"
+                        TextColor="White"
+                        FontSize="20" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        WidthRequest="200" 
+                        HeightRequest="60" 
+                        />
+            </StackLayout>
+        </ScrollView>
+
+        <StackLayout Padding="20" VerticalOptions="End">
+            <Entry Placeholder="Search" 
+                   FontSize="18" 
+                   BackgroundColor="#DDA0DD" 
+                   TextColor="White"
+                   HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+    
+   

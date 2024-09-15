@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
               
              Title="GroupsPage" 
-             BackgroundColor="#6c6c6c">
+             BackgroundColor="#87CEEB">
     <StackLayout>
         <Label 
             Text="Group Page" 
@@ -16,7 +16,7 @@
             <StackLayout>
                 <Button Text="Group 1" 
                         CornerRadius="20" 
-                        BackgroundColor="#DDA0DD"
+                        BackgroundColor="#87CEEB"
                         TextColor="White" 
                         FontSize="20" 
                         HorizontalOptions="Center" 
@@ -27,7 +27,7 @@
 
                 <Button Text="Group 2" 
                         CornerRadius="20" 
-                        BackgroundColor="#DDA0DD"
+                        BackgroundColor="#87CEEB"
                         TextColor="White"
                         FontSize="20" 
                         HorizontalOptions="Center" 
@@ -38,7 +38,7 @@
 
                 <Button Text="Group 3" 
                         CornerRadius="20" 
-                        BackgroundColor="#DDA0DD"
+                        BackgroundColor="#87CEEB"
                         TextColor="White"
                         FontSize="20" 
                         HorizontalOptions="Center" 
@@ -49,7 +49,7 @@
 
                 <Button Text="Group 4" 
                         CornerRadius="20" 
-                        BackgroundColor="#DDA0DD"
+                        BackgroundColor="#87CEEB"
                         TextColor="White"
                         FontSize="20" 
                         HorizontalOptions="Center" 

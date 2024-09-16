@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskmanager.GroupPage"
+             Title="GroupPage">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Group Operations"
+                   FontSize="24" 
+                   FontAttributes="Bold" />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+                <Button Text="CPSA."
+                        WidthRequest="100"
+                        Clicked="OnCPSAButtonClicked"/>
+                <Button Text="Next Company"
+                        WidthRequest="100" 
+                        Clicked="OnNextCompanyButtonClicked"/>
+            </StackLayout>
+            <Label Text="All Tasks" 
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0"/>
+            <StackLayout x:Name="TasksStack">
+                <Label Text="Task 1" 
+                       Padding="10" />
+                <Label Text="Task 2"
+                       Padding="10" />
+                
+            </StackLayout>
+            <Button Text="+" WidthRequest="50" HeightRequest="50" BackgroundColor="LightGreen" Clicked="OnAddTaskButtonClicked" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+   

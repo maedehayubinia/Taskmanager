@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskmanager.GroupPage"
+             Title="GroupPage"
+              BackgroundColor="#81CEEB">
+    <StackLayout Padding="20">
+        <Entry x:Name="searchEntry" 
+               Placeholder="Search Groups..."
+               TextChanged="OnSearchTextChanged"/>
+
+        <ListView x:Name="groupListView" ItemsSource="{Binding FilteredGroups}" 
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Execute">
+                                    <SwipeItem Text="Delete"
+                                               BackgroundColor="White"
+                                               Command="{Binding BindingContext.DeleteCommand, Source={x:Reference groupListView}}"
+                                               CommandParameter="{Binding .}"/>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid Padding="10">
+                                <Label Text="{Binding .}" VerticalOptions="Center"/>
+                            </Grid>
+                        </SwipeView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text=" + Add Group" 
+                CornerRadius="10"
+                WidthRequest="350"
+                HeightRequest="50"
+                BackgroundColor="White"
+                TextColor="#DDA0DD"
+                FontSize="18"
+                Clicked="OnAddButtonClicked"/>
+    </StackLayout>
+</ContentPage>

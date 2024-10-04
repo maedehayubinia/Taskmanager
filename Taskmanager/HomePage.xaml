@@ -1,62 +1,154 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Taskmanager.HomePage"
-             Title="HomePage"
-             BackgroundColor="Black">
-    <StackLayout>
-        <Label
-            Text="Home Page"
-            TextColor="black"
-            FontSize="48"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            Margin="0, 40, 0, 70"/>
-        <Button
-            Text="Group"
-            BackgroundColor="#D9D9D9"
-            TextColor="Black"
-            FontSize="50"
-            FontAttributes="Bold"
-            CornerRadius="171"
-            WidthRequest="358"
-            HeightRequest="93"
-            Margin="0, 30, 0, 20"
-            Clicked="groupButton"/>
-        <Button
-            Text="People"
-            BackgroundColor="#D9D9D9"
-            TextColor="Black"
-            FontSize="50"
-            FontAttributes="Bold"
-            CornerRadius="171"
-            WidthRequest="358"
-            HeightRequest="93"
-            Margin="0, 30, 0, 20"
-            Clicked="peopleButton"/>
-        <Button
-            Text="Domain"
-            BackgroundColor="#D9D9D9"
-            TextColor="Black"
-            FontSize="50"
-            FontAttributes="Bold"
-            CornerRadius="171"
-            WidthRequest="358"
-            HeightRequest="93"
-            Margin="0, 30, 0, 20"
-            Clicked="domainButton"/>
-        <Button
-            Text="Tasks"
-            BackgroundColor="#D9D9D9"
-            TextColor="Black"
-            FontSize="50"
-            FontAttributes="Bold"
-            CornerRadius="171"
-            WidthRequest="358"
-            HeightRequest="93"
-            Margin="0, 30, 0, 20"
-            Clicked="tasksButton"/>
-        
-    </StackLayout>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Taskmanager.HomePage"
+            FlyoutLayoutBehavior="Popover">
+    
 
-</ContentPage>
+    
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu"
+                     BackgroundColor="#2C3E50">
+            <StackLayout Padding="20" Spacing="20">
+                <Label Text="Menu" 
+                       FontSize="36" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center" 
+                       TextColor="White" 
+                       Margin="0, 40, 0, 20"/>
+
+               
+                <Button Text="Home"
+                        Clicked="OnHomeClicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"
+                        HeightRequest="50"/>
+
+                <!-- People Button -->
+                <Button Text="People"
+                        Clicked="OnPeopleClicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"
+                        HeightRequest="50"/>
+
+                <!-- Domain Button -->
+                <Button Text="Domain"
+                        Clicked="OnDomainClicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"
+                        HeightRequest="50"/>
+
+                <!-- Tasks Button -->
+                <Button Text="Tasks"
+                        Clicked="OnTasksClicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"
+                        HeightRequest="50"/>
+
+                <!-- Profile Button with Icon -->
+                <Button Text="Profile"
+                        Clicked="OnProfileClicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"
+                        HeightRequest="50">
+                    <Button.ImageSource>
+                        <FileImageSource File="profile_icon.png" />
+                    </Button.ImageSource>
+                </Button>
+
+                <!-- Message Button with Icon -->
+                <Button Text="Message"
+                        Clicked="OnMessageClicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"
+                        HeightRequest="50">
+                    <Button.ImageSource>
+                        <FileImageSource File="message_icon.png" />
+                    </Button.ImageSource>
+                </Button>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <!-- Main Page Content -->
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="HomePage"
+                             BackgroundColor="#ECF0F1">
+
+                    <!-- Toolbar with Hamburger Icon -->
+                    <ContentPage.ToolbarItems>
+                        <ToolbarItem IconImageSource="hamburger.png" 
+                            
+                           
+                                     Priority="0" 
+                                     Order="Primary" 
+                                     Clicked="OnMenuClicked"/>
+                    </ContentPage.ToolbarItems>
+
+                    <StackLayout Padding="30">
+                        <Label
+                            Text="Home Page"
+                            TextColor="#2C3E50"
+                            FontSize="36"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            Margin="0, 30, 0, 60"/>
+
+                        <Button
+                            Text="People"
+                            BackgroundColor="#3498DB"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            CornerRadius="10"
+                            HeightRequest="60"
+                            Margin="0, 20, 0, 10"
+                            Clicked="PeopleButton"/>
+
+                        <Button
+                            Text="Domain"
+                            BackgroundColor="#3498DB"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            CornerRadius="10"
+                            HeightRequest="60"
+                            Margin="0, 20, 0, 10"
+                            Clicked="DomainButton"/>
+
+                        <Button
+                            Text="Tasks"
+                            BackgroundColor="#3498DB"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            CornerRadius="10"
+                            HeightRequest="60"
+                            Margin="0, 20, 0, 10"
+                            Clicked="TasksButton"/>
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

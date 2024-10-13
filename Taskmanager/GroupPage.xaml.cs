@@ -66,11 +66,6 @@ public partial class GroupPage : ContentPage
     }
     public ICommand DeleteCommand { get; }
 
-
-   
-
-    
-
     private async void OnAddButtonClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new AddGroup());

@@ -13,6 +13,7 @@ public partial class HomePage : FlyoutPage
         IsPresented = !IsPresented;
     }
 
+
     private async void OnHomeClicked(object sender, EventArgs e)
     {
         Detail = new NavigationPage(new HomePage());
@@ -54,7 +55,8 @@ public partial class HomePage : FlyoutPage
     }
     private async void OnProfileClicked(object sender, EventArgs e)
     {
-        Detail = new NavigationPage(new ProfilePage());
+       
+        Detail = new NavigationPage(new Profile());
         IsPresented = false;
     }
 

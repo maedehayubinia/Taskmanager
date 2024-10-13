@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskmanager.AddGroup"
              Title="AddGroup"
-              BackgroundColor="#81CEEB">
+             BackgroundColor="#2C3E50">
+
     <StackLayout Padding="20">
         <Label Text="Add Group" 
                FontSize="30" 
-               TextColor="Black"
+               TextColor="#ECF0F1"
                HorizontalOptions="Center" 
                Margin="0, 20, 0, 20"/>
 
@@ -26,17 +27,17 @@
                 CornerRadius="10"
                 WidthRequest="350"
                 HeightRequest="50"
-                BackgroundColor="White"
-                TextColor="#DDA0DD"
+                BackgroundColor="#3498DB"
+                TextColor="#ECF0F1"
                 FontSize="18"
                 Margin="0, 20, 0, 0"/>
 
-        <!-- Frame to show members and Save button -->
+
         <Frame IsVisible="False" x:Name="membersFrame" BorderColor="LightGray" Padding="10" CornerRadius="10">
             <StackLayout>
-                <!-- ScrollView added to make the members list scrollable -->
+
                 <ScrollView>
-                    <!-- CollectionView to display members with CheckBox -->
+
                     <CollectionView x:Name="membersCollectionView" HeightRequest="300">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
@@ -52,14 +53,14 @@
                     </CollectionView>
                 </ScrollView>
 
-                <!-- Save Button inside the members frame -->
+
                 <Button Text="Save" 
                         Clicked="OnSaveButtonClicked" 
                         HorizontalOptions="FillAndExpand" 
                         CornerRadius="10"
                         WidthRequest="350"
                         HeightRequest="50"
-                        BackgroundColor="#DDA0DD"
+                        BackgroundColor="#3498DB"
                         TextColor="White"
                         FontSize="18"
                         Margin="0, 20, 0, 0"/>
@@ -72,8 +73,8 @@
                 CornerRadius="10"
                 WidthRequest="350"
                 HeightRequest="50"
-                BackgroundColor="#DDA0DD"
-                TextColor="White"
+                BackgroundColor="#ECF0F1"
+                TextColor="#3498DB"
                 FontSize="18"
                 Margin="0, 20, 0, 0"/>
     </StackLayout>

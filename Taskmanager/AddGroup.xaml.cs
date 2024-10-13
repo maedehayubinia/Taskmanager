@@ -22,7 +22,7 @@ public partial class AddGroup : ContentPage
                new Member { Name = "User3" }
             };
 
-        // ???? ???? ?? ?? CollectionView ???? ???????
+     
         membersCollectionView.ItemsSource = Members;
     }
     private void OnShowMembersButtonClicked(object sender, EventArgs e)
@@ -44,13 +44,13 @@ public partial class AddGroup : ContentPage
 
         if (!string.IsNullOrWhiteSpace(groupNameEntry.Text) && !string.IsNullOrWhiteSpace(groupidEntry.Text) && selectedMembers.Any())
         {
-            // ????? ????????? ???? ?? ????? ?? ????? ?????? ??? ????? ????
+            
             DisplayAlert("Group Saved", $"Group '{groupNameEntry.Text}' with {selectedMembers.Count} members added.", "OK");
 
-            // ???? ???? ???? ???? ?? ?? ?????
+          
             membersFrame.IsVisible = false;
 
-            // ????? ?????? ???? Show Members
+          
             showMembersButton.IsVisible = true;
         }
         else
@@ -60,12 +60,12 @@ public partial class AddGroup : ContentPage
     }
     private void OnSaveGroupButtonClicked(object sender, EventArgs e)
     {
-        // Handle the final group creation logic
+        
         string groupName = groupNameEntry.Text;
         string groupId = groupidEntry.Text;
 
-        // Add your logic to create the group with selected members
-        // e.g., saving to a database, making an API call, etc.
+      
+      
     }
 
     public class Member

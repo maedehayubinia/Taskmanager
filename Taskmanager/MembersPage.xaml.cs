@@ -33,23 +33,23 @@ public partial class MembersPage : ContentPage
     private async void OnDeleteUser(object sender, EventArgs e)
     {
         var swipeItem = sender as SwipeItem;
-        var member = (sender as BindableObject)?.BindingContext as Member; // Model for Member
+        var member = (sender as BindableObject)?.BindingContext as Member; 
 
         if (member != null)
         {
-            // Remove the member from your collection
+            
             var result = await DisplayAlert("Confirm Delete", $"Are you sure you want to delete {member.Username}?", "Yes", "No");
             if (result)
             {
-                // Perform deletion
-                // Example: Members.Remove(member);
+                
+               
             }
         }
     }
 
     private async void OnMemberTapped(object sender, EventArgs e)
     {
-        var tappedItem = (sender as Microsoft.Maui.Controls.Grid)?.BindingContext as Member; // Model for Member
+        var tappedItem = (sender as Microsoft.Maui.Controls.Grid)?.BindingContext as Member;
 
         if (tappedItem != null)
         {
@@ -108,7 +108,7 @@ public class Member
     public string JobTitle { get; set; }
     public string Group { get; set; }
     public string Password { get; internal set; }
-    public string ProfileImage { get; set; } // ???? ????? ???????
+    public string ProfileImage { get; set; } 
     public string GroupName { get; set; }
 }
 

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Taskmanager
+﻿namespace Taskmanager
 {
     public partial class MainPage : ContentPage
     {
@@ -9,35 +7,38 @@ namespace Taskmanager
         public MainPage()
         {
             InitializeComponent();
+           // MainPage = new NavigationPage(new HomePage());
+
         }
-        string username = "maedeh";
-        string password = "12345";
 
-        private void PasswordShow (object sender, EventArgs e)
+        string username = "m";
+        string password = "8282";
+
+        
+
+        private void PasswordShow(object sender, EventArgs e)
         {
-            PasswordEntry.IsPassword = !PasswordEntry.IsPassword;
-
+            passwordEntry.IsPassword = !passwordEntry.IsPassword;
         }
         private void LoginButton(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(UserNameEntry.Text) && !string.IsNullOrEmpty(PasswordEntry.Text))
+            if (!string.IsNullOrEmpty(userNameEntry.Text) && !string.IsNullOrEmpty(passwordEntry.Text))
             {
-                if(UserNameEntry.Text == username && PasswordEntry.Text == password)
+                if (userNameEntry.Text == username && passwordEntry.Text == password)
                 {
                     App.Current.MainPage = new SmsPage();
                 }
                 else
                 {
-                    DisplayAlert("Hoooy", "Huh", "Bede sish");
+                    DisplayAlert("Heey", "Something wrong", "...");
                 }
 
+                App.Current.MainPage = new SmsPage();
             }
             else
             {
-                DisplayAlert("Hoooy", "Huh", "Bede sish");
-
+                DisplayAlert("Heey", "Something wrong", "...");
             }
         }
     }
-
 }

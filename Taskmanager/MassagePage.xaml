@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Taskmanager.MassagePage"
+             Title="MassagePage"
+              BackgroundColor="#2C3E50">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="hamburger.png"
+                   Priority="0"
+                   Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="20">
+      
+        <Label Text="Messages"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="messageEntry"
+               Placeholder="Write your message"
+               HeightRequest="100" />
+
+        <Button Text="Send"
+                Clicked="OnSendMessageClicked"
+                                BackgroundColor="#3498DB"
+TextColor="#ECF0F1"/>
+
+        <ListView x:Name="messagesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout> 
+</ContentPage>

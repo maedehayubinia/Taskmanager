@@ -1,62 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Taskmanager.MainPage">
-    <StackLayout>
+             x:Class="Taskmanager.MainPage"
+     BackgroundColor="#2C3E50">
+
+    <StackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
         <Image
-            WidthRequest="150"
-            Margin="0, 20, 0, 60"/>
+            Source="profileone.png"
+            WidthRequest="200"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            Aspect="AspectFit"
+            Margin="0, 0, 0, 0"/>
         <Frame
-        BackgroundColor="#DDA0DD"
+            BackgroundColor="#ECF0F1"
+            CornerRadius="24"
             WidthRequest="350"
-            CornerRadius="24">
-        <Entry
-            x:Name="UserNameEntry"
-            Placeholder="User Name"
-            PlaceholderColor="White"
-            FontSize="20"
-            HorizontalTextAlignment="Center"/>
+            HorizontalOptions="Center"
+            HasShadow="True">
+            <Entry
+                x:Name="userNameEntry"
+                Placeholder="User Name"
+                PlaceholderColor="#7F8C8D"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                TextColor="#2C3E50"/>
+        </Frame>
 
-    </Frame>
-
-    <Frame
+        
+        <Frame
+            BackgroundColor="#ECF0F1"
+            CornerRadius="24"
+            WidthRequest="350"
+            HorizontalOptions="Center"
             Margin="0, 15, 0, 0"
-            BackgroundColor="#DDA0DD"
-            WidthRequest="350"
-            CornerRadius="24">
-        <Entry
-            x:Name="PasswordEntry"
-            Placeholder="Password"
-            PlaceholderColor="White"
-            FontSize="20"
-            HorizontalTextAlignment="Center"
-            IsPassword="True"/>
+            HasShadow="True">
+            <Entry
+                x:Name="passwordEntry"
+                Placeholder="Password"
+                PlaceholderColor="#7F8C8D"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                IsPassword="True"
+                TextColor="#2C3E50"/>
+        </Frame>
 
-    </Frame>
-    <Button
-            BackgroundColor="#DDA0DD"
+        
+        <Button
+            BackgroundColor="#3498DB"
             WidthRequest="50"
-            Margin="0, 10, 30, 0"
+            Margin="0, 5, 30, 0"
             HorizontalOptions="End"
-            Text="0"
-            FontSize="20"
-            Clicked="PasswordShow"/>
-    <Button
-            BackgroundColor="#DDA0DD"
-            Margin="0, 22, 0, 0"
-            WidthRequest="300"
-            HeightRequest="50"
-            CornerRadius="50"
-            Text="login"
+            Text="O"
             TextColor="White"
             FontSize="20"
-            FontAttributes="Bold,Bold"
+            CornerRadius="25"
+            Clicked="PasswordShow"/>
+
+        
+        <Button
+            BackgroundColor="#3498DB"
+            Margin="0, 100, 0, 0"
+            WidthRequest="300"
+            HeightRequest="60"
+            CornerRadius="30"
+            Text="Login"
+            TextColor="White"
+            FontSize="20"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
             Clicked="LoginButton"/>
-    <Button
-            Margin="0, 20, 0, 0"
-            BackgroundColor="#DDA0DD"
-            Text="Forget Password"
-            TextColor="White"/>
+
+        
+        <Button
+            BackgroundColor="Transparent"
+            Text="Forgot Password?"
+            TextColor="#E74C3C"
+            FontAttributes="Italic"
+            FontSize="16"
+            HorizontalOptions="Center"/>
     </StackLayout>
 
 </ContentPage>

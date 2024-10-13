@@ -3,32 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Taskmanager.SmsPage"
              Title="SmsPage"
-             BackgroundColor="#87CEEB">
-    <StackLayout>
+    BackgroundColor="#2C3E50">
+
+    <StackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+     
         <Label
-            Text="S M S"
-            FontSize="150"
+            Text="Enter SMS Code"
+            FontSize="32"
+            FontAttributes="Bold"
             HorizontalOptions="Center"
             TextColor="White"
-            Margin="0, 30, 0, 190"/>
+            Margin="0, 0, 0, 40" />
+
+       
         <Frame
-            WidthRequest="250">
+            BackgroundColor="#ECF0F1"
+            CornerRadius="20"
+            Padding="15"
+            HasShadow="True"
+            WidthRequest="300"
+            HorizontalOptions="Center">
             <Entry
+                Placeholder="SMS Code"
+                Keyboard="Numeric"
                 HorizontalTextAlignment="Center"
                 FontAttributes="Bold"
-                Keyboard="Numeric"
-                FontSize="40"
+                FontSize="24"
                 MaxLength="5"
-                Placeholder="SMS Code"/>
+                TextColor="#2C3E50" />
         </Frame>
+
+       
         <Label
             x:Name="timerLabel"
             Text="3:00"
+            TextColor="#E74C3C"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center" />
+
+        <!-- دکمه Done -->
+        <Button
+            Text="Done"
+            BackgroundColor="#3498DB"
             TextColor="White"
+            FontAttributes="Bold"
+            FontSize="20"
+            CornerRadius="25"
+            WidthRequest="200"
+            HeightRequest="60"
+            Margin="0, 40, 0, 0"
             HorizontalOptions="Center"
-            Margin="0, 30, 0, 0"
-            FontSize="50"/>
-        
+            Clicked="doneButton"/>
     </StackLayout>
 
 </ContentPage>
